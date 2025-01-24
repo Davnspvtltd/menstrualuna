@@ -1,0 +1,113 @@
+/* components/Calendar.css */
+
+/* Calendar Section */
+.calendar-section {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Calendar Header */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Calendar Controls (Buttons) */
+.calendar-controls button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6c63ff;
+}
+
+/* Calendar Grid Layout */
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 equal columns for each day of the week */
+  gap: 0.5rem;
+}
+
+/* Calendar Day Styling */
+.calendar-day {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Light grey */
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none; /* Prevent text selection */
+}
+
+/* Selected Day Styling */
+.calendar-day.selected {
+  background-color: #ff6b6b; /* Red, highlight selected period dates */
+  color: white;
+}
+
+/* Empty Days (not part of the month) */
+.calendar-day.empty {
+  background-color: transparent;
+  cursor: default;
+}
+
+/* Past Day Styling */
+.calendar-day.past-day {
+  background-color: #f9f9f9; /* Light grey for past days */
+  color: #999; /* Lighter grey text */
+  cursor: not-allowed; /* Not clickable */
+}
+
+/* Past Period Day Styling */
+.calendar-day.past-day {
+  background-color: #8a2be2; /* Violet color for past period dates */
+  color: white;
+  cursor: not-allowed;
+}
+
+/* Current Date Highlight */
+.calendar-day.current-date {
+  background-color: #ff00e1; /* Bright pink for today’s date */
+  color: white;
+  font-weight: bold;
+}
+
+/* Edit Button Styling */
+.edit-button {
+  background: none;
+  border: none;
+  color: #6c63ff; /* Purple */
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* Cycle Settings Popup */
+.cycle-settings {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f9f9f9; /* Light grey */
+  border-radius: 10px;
+}
+
+/* Cycle Settings Label */
+.cycle-settings label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Cycle Settings Input Field */
+.cycle-settings input {
+  width: 100%;
+  padding: 0.4rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px;
+}

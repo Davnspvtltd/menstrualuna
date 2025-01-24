@@ -1,0 +1,213 @@
+/* Use Google Fonts for premium typography */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #121212; /* Dark background for a premium look */
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Link styling */
+a {
+  font-weight: 500;
+  color: #b6b6b6;
+  text-decoration: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #9a9a9a;
+}
+
+/* Body styling */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top */
+  align-items: center; /* Horizontally center the content */
+  min-width: 320px;
+  height: 100vh; /* Ensure it takes full height of the screen */
+  background-color: #121212;
+  color: rgba(255, 255, 255, 0.87);
+  overflow-y: auto; /* Allow vertical scrolling if content overflows */
+}
+
+/* Main content container */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #FFC5D3; /* Slightly lighter dark background */
+  border-radius: 16px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading Styling */
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3.4em;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 20px;
+  text-align: center;
+  max-width: 90%;
+  word-wrap: break-word;
+  color: #9801a9;
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Adds spacing between letters for a more premium feel */
+}
+
+/* NavBar Styling */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #121212; /* Dark background */
+  width: 100%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  text-decoration: none; /* Remove underline from the link */
+}
+
+.logo-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #9801a9;
+  margin: 0;
+  text-transform: uppercase; /* Optional: for a premium, all-caps feel */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-button {
+  padding: 10px 15px;
+  font-size: 1.2em;
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 20px; /* Space between buttons */
+}
+
+.nav-button:hover {
+  background-color: #444;
+}
+
+/* Button Styling */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.8em 1.4em;
+  font-size: 1.1em;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  background-color: #4a4a4a;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+  max-width: 90%;
+  text-transform: uppercase; /* Make button text uppercase */
+  letter-spacing: 0.5px; /* Slightly space out the letters */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #6a6a6a;
+  border-color: #8c8c8c;
+  transform: translateY(-2px); /* Subtle lifting effect */
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px solid #9a9a9a;
+  outline-offset: 2px;
+}
+
+/* Light theme styles */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+    color: #FFC5D3;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  }
+
+  button:hover {
+    background-color: #e5e5e5;
+    border-color: #bbb;
+    transform: translateY(-2px);
+  }
+}
+
+/* Responsive design - Adjust layout for smaller screen sizes */
+@media (max-width: 768px) {
+  body {
+    padding: 2rem; /* Add padding for smaller screens */
+  }
+
+  h1 {
+    font-size: 2.7em; /* Reduce font size for smaller screens */
+  }
+
+  button {
+    padding: 0.7em 1.2em; /* Adjust button padding */
+  }
+
+  .logo-title {
+    font-size: 1.6em; /* Adjust font size for logo title on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2.4em; /* Further reduce font size on smaller devices */
+  }
+
+  button {
+    width: 100%; /* Make button full-width on small screens */
+    padding: 1em;
+  }
+
+  .logo-title {
+    font-size: 1.4em; /* Adjust logo title for small screens */
+  }
+}
